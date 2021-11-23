@@ -20,7 +20,6 @@ def main():
     global Instance
 
     try:
-        create_directory()
         Instance = webdriver.Chrome(
             ChromeDriverManager().install(), options=chrome_options)
 
