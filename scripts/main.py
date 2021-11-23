@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from webdrivermanager.chrome import ChromeDriverManager
 from linkpreview import link_preview
 
 import sys
@@ -21,7 +21,7 @@ def main():
 
     try:
         Instance = webdriver.Chrome(
-            ChromeDriverManager().install(), options=chrome_options)
+            ChromeDriverManager().download_and_install()[0], options=chrome_options)
 
         preview_link(
             "https://stacksecrets.com/flutter/flutter-textfield-decoration-in-depth#Customizing_The_Look_And_Feel_Of_TextField")
